@@ -26,3 +26,4 @@ patient_info = {'name':'noman', 'email':'abc@gmail.com', 'linkedin_url':'http://
 patient1 = Patient(**patient_info)
 
 update_patient_data(patient1)
+
