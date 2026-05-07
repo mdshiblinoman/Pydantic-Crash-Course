@@ -9,7 +9,7 @@ class Address(BaseModel):
 class Patient(BaseModel):
 
     name: str
-    gender: str
+    gender: str = 'Male'
     age: int
     address: Address
 
@@ -21,5 +21,7 @@ patient_dict = {'name': 'Noman', 'gender': 'male', 'age': 23, 'address': address
 
 patient1 = Patient(**patient_dict)
 
-print(patient1.address.city)
-print(patient1.address.state)
+temp = patient1.model_dump(exclude_unset=True)
+
+print(temp)
+print(type(temp))
